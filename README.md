@@ -33,6 +33,7 @@ Use in templates
         <title>{{ subject }}</title>
         <style media="all" type="text/css">
             {% bootstrap_email %}
+            {# or use bootstrap_email_min for stripped file #}
         </style>
     </head>
 
