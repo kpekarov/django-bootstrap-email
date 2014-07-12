@@ -1,0 +1,10 @@
+doc-src/_build/*
+doc/*
+*.pyc
+*.swp
+*.iml
+.idea*
+.DS_Store
+dist/
+django_bootstrap_email.egg-info/
+build/
