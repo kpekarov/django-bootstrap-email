@@ -26,16 +26,52 @@ Use in templates
 
     {% load bootstrap_email %}
 
-    <!DOCTYPE html>
     <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-        <title>{{ subject }}</title>
-        <style media="all" type="text/css">
+        <title>[REPLACE THIS WITH YOUR TITLE]</title>
+            <style media="all" type="text/css">
             {% bootstrap_email %}
             {# or use bootstrap_email_min for stripped file #}
         </style>
     </head>
+    <body>
+        <table cellspacing="0" cellpadding="0" border="0" width="100%">
+            <tr>
+                <td class="navbar navbar-inverse" align="center">
+                    <!-- This setup makes the nav background stretch the whole width of the screen. -->
+                    <table width="650px" cellspacing="0" cellpadding="3" class="container">
+                        <tr class="navbar navbar-inverse">
+                            <td colspan="4"><a class="brand" href="[YOUR WEB URL]">Bootstrap For Email</a></td>
+                            <td><ul class="nav pull-right"><li><a href="[YOUR LOGIN URL]">Log On</a></li></ul></td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+            <tr>
+                <td bgcolor="#FFFFFF" align="center">
+                    <table width="650px" cellspacing="0" cellpadding="3" class="container">
+                        <tr>
+                            <td>[BODY CONTENT GOES HERE]</td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+            <tr>
+                <td bgcolor="#FFFFFF" align="center">
+                    <table width="650px" cellspacing="0" cellpadding="3" class="container">
+                        <tr>
+                            <td>
+                                <hr>
+                                <p>[PUT YOUR COPYRIGHT OR OTHER FOOTERY GOODNESS HERE]</p>
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+        </table>
+    </body>
+    </html>
 
 Bugs and requests
 -----------------
