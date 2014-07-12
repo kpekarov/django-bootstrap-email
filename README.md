@@ -42,7 +42,7 @@ Bugs and requests
 
 If you have found a bug or a request for additional functionality, please use the issue tracker on GitHub.
 
-https://github.com/dyve/django-bootstrap-email/issues
+https://github.com/kpekarov/django-bootstrap-email/issues
 
 About
 -----
