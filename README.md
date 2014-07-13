@@ -21,6 +21,18 @@ Installation
 
         'bootstrap_email',
 
+
+In code
+-------
+    from django.template.loader import render_to_string
+    from django.utils.html import strip_tags
+
+    def send_activation_email:
+        subject = 'Activate your account'
+        html_content = render_to_string('email_activation.html', {'subject':subject})
+        ...
+
+
 Use in templates
 ----------------
 
@@ -29,7 +41,7 @@ Use in templates
     <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-        <title>[REPLACE THIS WITH YOUR TITLE]</title>
+        <title>{{ subject }}</title>
             <style media="all" type="text/css">
             {% bootstrap_email %}
             {# or use bootstrap_email_min for stripped file #}
